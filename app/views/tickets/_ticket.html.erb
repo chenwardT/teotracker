@@ -1,0 +1,13 @@
+<tr>
+  <td><h4>
+  <span class="btn btn-<%= ticket_status_class ticket %>"><%= ticket_status ticket %></span>
+  <%= ticket.title %> <small><%= "#{ticket.product.name} v#{ticket.product.version}" %></small>
+  </h4></td>
+</tr>
+<tr>
+  <td>
+<p><%= ticket.text %></p>
+<h4><small>Product Serial # <%= ticket.serial %></small></h4>
+<h5><small>opened <%= time_ago_in_words ticket.created_at %> ago</small></h5>
+  </td>
+</tr>

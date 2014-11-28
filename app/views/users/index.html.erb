@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <h3>Users</h3>
+    <div class="column">
+      <table class="table table-striped">
+        <tbody>
+        <thead>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone</td>
+        <td>Department</td>
+        <td>Organization</td>
+        </thead>
+        <% @users.each do |user| %>
+            <tr>
+              <%= render user %>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -30,6 +30,11 @@ gem 'devise'
 
 gem 'faker'
 
+gem 'bootstrap-sass'
+
+gem 'byebug',      '3.4.0'
+gem 'web-console', '2.0.0.beta3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

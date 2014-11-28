@@ -1,0 +1,20 @@
+<div class="center jumbotron">
+  <h1>TeoTracker is the simple, effective issue tracker.</h1>
+
+  <h2>
+    From planning, to coding, to testing, to customer support,
+    DoneDone is the refreshingly simple issue tracker.
+    No more spreadsheets, sticky notes, and emails
+    about web and software projects. Just one
+    uncomplicated, central hub.
+  </h2>
+
+  <% if user_signed_in? %>
+      <%= link_to "View your tickets", user_path(current_user), class: "btn btn-lg btn-primary" %>
+  <% else %>
+      <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+</div>
+
+<%= link_to image_tag("http://rubyonrails.org/images/rails.png", alt: "Rails logo"),
+            'http://rubyonrails.org/' %>

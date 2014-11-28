@@ -26,7 +26,7 @@ end
   user.password_confirmation = 'foobarbaz'
   user.last_sign_in_at = Faker::Date.backward(180)
   user.last_sign_in_ip = Faker::Internet.ip_v4_address
-  user.organization_id = rand(11)
+  user.organization_id = rand(10) + 1
   user.first_name = Faker::Name.first_name
   user.last_name = Faker::Name.last_name
   user.phone = Faker::PhoneNumber.phone_number
@@ -47,9 +47,9 @@ end
   ticket = Ticket.new
   ticket.title = "#{Faker::Hacker.noun} #{Faker::Hacker.verb} #{Faker::Hacker.ingverb}"
   ticket.text = "#{Faker::Hacker.say_something_smart} #{Faker::Hacker.say_something_smart}"
-  ticket.user_id = rand(31)
+  ticket.user_id = rand(30) + 1
   ticket.is_open = rand(2)
   ticket.serial =  Faker::Number.number(10)
-  ticket.product_id = rand(21)
+  ticket.product_id = rand(20) + 1
   ticket.save!
 end
