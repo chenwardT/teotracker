@@ -13,3 +13,9 @@
 <% else %>
     No tickets; you're problem-free!
 <% end %>
+
+<div>
+  <% if @user == current_user %>
+    <%= render 'tickets/ticket_form' %>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h3>Tickets</h3>
+    <div class="column">
+      <table class="table table-striped">
+        <tbody>
+        <% @tickets.each do |ticket| %>
+            <tr>
+              <%= render ticket %>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

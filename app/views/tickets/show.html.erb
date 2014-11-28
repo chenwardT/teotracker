@@ -1,0 +1,7 @@
+<h3>Ticket for <%= @ticket.product.name %> <%= @ticket.product.version %></h3>
+<h5>Submitted by <%= @ticket.user.first_name %> <%= @ticket.user.last_name %> (<%= @ticket.user.organization.name %>)</h5>
+<dl>
+    <dt><%= @ticket.title %></dt>
+    <dd><%= @ticket.text %></dd>
+</dl>
+

@@ -1,0 +1,16 @@
+<%= form_for [@user, @ticket] do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="field">
+      <%= f.label :product %>
+      <%= f.collection_select :product_id, Product.all, :id, :name_and_version %>
+    </div>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, placeholder: 'Issue title, e.g. Strange readings on FME scale' %>
+    </div>
+    <div>
+      <%= f.label :text %>
+      <%= f.text_area :text, placeholder: 'Issue text, e.g. Bias voltage low when C2 diode enters avalanche mode' %>
+    </div>
+    <%= f.submit 'Submit issue', class: 'btn btn-primary' %>
+<% end %>

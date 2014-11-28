@@ -8,6 +8,6 @@
   <td>
 <p><%= ticket.text %></p>
 <h4><small>Product Serial # <%= ticket.serial %></small></h4>
-<h5><small>opened <%= time_ago_in_words ticket.created_at %> ago</small></h5>
+<h5><small>opened <%= time_ago_in_words ticket.created_at %> ago by <%= link_to "#{ticket.user.first_name} #{ticket.user.last_name}", user_path(ticket.user) %></small></h5>
   </td>
 </tr>
